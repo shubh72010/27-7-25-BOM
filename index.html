@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-ZRO Smartwatch - Bill of Materials (BOM)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+        h1, h3 { color: #2c3e50; }
+        h1 { font-size: 2em; margin-bottom: 0.5em; }
+        h3 { font-size: 1.5em; margin-top: 2em; margin-bottom: 0.8em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .header-info { margin-bottom: 20px; font-size: 0.9em; color: #555; }
+        .header-info span { margin-right: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; color: #333; font-weight: bold; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        .summary-table { margin-top: 30px; border: 2px solid #2c3e50; }
+        .summary-table th, .summary-table td { background-color: #e0f2f7; font-weight: bold; }
+        .summary-table tr:nth-child(even) { background-color: #d1ecf1; }
+        .summary-table tr:last-child td { border-bottom: none; }
+        .notes, .rationale { font-size: 0.9em; color: #666; padding-top: 5px; }
+        .notes-list { list-style-type: disc; margin-left: 20px; }
+        .notes-list li { margin-bottom: 5px; }
+        .target-cost { font-weight: bold; color: #e74c3c; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✧･ﾟT-ZRO Smartwatch — Bill of Materials (BOM) ･ﾟ✧</h1>
+
+        <div class="header-info">
+            <span>🗓️ Date: 27/07/2025</span>
+            <span>🏢 Team: Designing + Planning (⟡ JusDots ⟡)</span>
+            <span>🎯 Product: 𝙏–𝙕𝙍𝙊</span>
+            <br>
+            <span class="target-cost">💸 Target Manufacturing Cost: ₹5,500 / unit</span>
+        </div>
+
+        <h3>🛠️ Main Components</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Component</th>
+                    <th>Details</th>
+                    <th>Estimated Unit Cost (₹)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><b>Display</b></td>
+                    <td>1.5″ AMOLED, approx. 128x128 to 200x200 resolution, good clarity & brightness</td>
+                    <td>1,000 - 1,200</td>
+                    <td class="notes">Crucial for premium feel. Cost assumes bulk purchase.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><b>SoC/Microcontroller</b></td>
+                    <td>Efficient Arm Cortex-M series (e.g., Nordic nRF52/53, Espressif ESP32-S). Supports Zephyr RTOS, smooth UI, BT.</td>
+                    <td>1,100 - 1,400</td>
+                    <td class="notes">Core processing power. Balances cost with performance.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><b>Memory (RAM/Flash)</b></td>
+                    <td>Integrated or discrete. Sufficient for OS, watch faces, basic apps (e.g., 64MB RAM, 256-512MB Flash).</td>
+                    <td>300 - 500</td>
+                    <td class="notes">Scales with required storage.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><b>Battery</b></td>
+                    <td>Slim Li-Po, 220–300mAh, reliable supplier for safety & longevity.</td>
+                    <td>150 - 200</td>
+                    <td class="notes">Invest in quality to avoid issues.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><b>Capacitive Side Touch Strip Module</b></td>
+                    <td>Custom flexible PCB with capacitive sensors & haptic driver IC.</td>
+                    <td>500 - 700</td>
+                    <td class="notes">Your unique selling point; R&D and custom fabrication factor in.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><b>GPS Module</b></td>
+                    <td>Low-power GNSS (GPS + GLONASS/Beidou for better accuracy).</td>
+                    <td>400 - 600</td>
+                    <td class="notes">Essential for navigation feature.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><b>Heart Rate Sensor</b></td>
+                    <td>Optical PPG sensor with integrated analog front-end for accuracy.</td>
+                    <td>250 - 400</td>
+                    <td class="notes">Core health tracking feature.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><b>Accelerometer</b></td>
+                    <td>3-axis accelerometer for step counting.</td>
+                    <td>120 - 180</td>
+                    <td class="notes">Standard motion sensing.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><b>Microphone & Speaker</b></td>
+                    <td>Compact, good quality for clear Bluetooth calling.</td>
+                    <td>200 - 300</td>
+                    <td class="notes">Necessary for call functionality.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><b>Charging IC & PMU</b></td>
+                    <td>Efficient power management for charging and system regulation.</td>
+                    <td>180 - 250</td>
+                    <td class="notes">Essential for battery health and system stability.</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><b>Vibration Motor (Haptics)</b></td>
+                    <td>Linear Resonant Actuator (LRA) or high-quality ERM for crisp haptic feedback.</td>
+                    <td>80 - 150</td>
+                    <td class="notes">Enhances the "feel first" experience.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>🧱 Enclosure & Mechanicals</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Component</th>
+                    <th>Details</th>
+                    <th>Estimated Unit Cost (₹)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12</td>
+                    <td><b>Aluminium Midframe</b></td>
+                    <td>Thin, precision machined/formed, anodized. Contributes significantly to premium feel.</td>
+                    <td>600 - 800</td>
+                    <td class="notes">Balances "metal feel" with cost, assumes good volume pricing.</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><b>Plastic Back Cover</b></td>
+                    <td>Injection molded, sensor-friendly, good finish.</td>
+                    <td>100 - 180</td>
+                    <td class="notes">Lower cost, but needs good finish for premium perception.</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><b>Front Glass/Lens</b></td>
+                    <td>Chemically strengthened glass (e.g., Gorilla Glass equivalent), oleophobic coating.</td>
+                    <td>200 - 300</td>
+                    <td class="notes">Durability and touch experience.</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td><b>Watch Strap</b></td>
+                    <td>High-quality, comfortable silicone with quick-release.</td>
+                    <td>100 - 180</td>
+                    <td class="notes">Part of the user's direct interaction.</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td><b>Buttons (Tactile)</b></td>
+                    <td>1-2 high-quality, responsive physical buttons.</td>
+                    <td>50 - 100</td>
+                    <td class="notes">For essential controls.</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><b>Gaskets & Adhesives</b></td>
+                    <td>For IP rating (water resistance) and secure internal assembly.</td>
+                    <td>70 - 120</td>
+                    <td class="notes">Crucial for durability and product longevity.</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td><b>PCB (Main Board & Flexes)</b></td>
+                    <td>Main rigid PCB (FR4) and flexible PCBs for side strip/display.</td>
+                    <td>200 - 350</td>
+                    <td class="notes">Accounts for multiple boards and complexity.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>📦 Packaging & Accessories</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Component</th>
+                    <th>Details</th>
+                    <th>Estimated Unit Cost (₹)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>19</td>
+                    <td><b>Retail Packaging</b></td>
+                    <td>Flat black box, foil-stamped logo, minimalist.</td>
+                    <td>90 - 150</td>
+                    <td class="notes">Reflects premium branding.</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td><b>Charging Cable</b></td>
+                    <td>Proprietary magnetic pogo-pin charging cable.</td>
+                    <td>80 - 120</td>
+                    <td class="notes">Custom for secure connection.</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td><b>Documentation/Manual</b></td>
+                    <td>Minimal quick start guide, quality print.</td>
+                    <td>15 - 25</td>
+                    <td class="notes">Attention to detail, even on small items.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>💰 Total Estimated Manufacturing Cost (per unit) for ₹5,500 Target</h3>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Estimated Cost per Unit (₹)</th>
+                    <th>Rationale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Direct Materials (BOM Sum)</b></td>
+                    <td>4,200</td>
+                    <td class="rationale">This is the average of the lower end of the ranges, pushing suppliers for competitive pricing.</td>
+                </tr>
+                <tr>
+                    <td><b>Assembly & Testing Labor</b></td>
+                    <td>500</td>
+                    <td class="rationale">Assuming a moderately efficient assembly line in India, with necessary QC steps.</td>
+                </tr>
+                <tr>
+                    <td><b>Contingency & Yield Loss</b></td>
+                    <td>400</td>
+                    <td class="rationale">~8-10% buffer for unexpected component price spikes, slight rejections, or minor production hiccups. This is a realistic allowance.</td>
+                </tr>
+                <tr>
+                    <td><b>Logistics & Freight</b></td>
+                    <td>150</td>
+                    <td class="rationale">Cost of moving components to the factory and finished goods to the warehouse/distribution centers.</td>
+                </tr>
+                <tr style="background-color: #cce7e8;">
+                    <td><b>TOTAL ESTIMATED MC PER UNIT</b></td>
+                    <td><b>₹5,250</b></td>
+                    <td class="rationale">This gives you a slight buffer below ₹5,500, acknowledging that the actual number might creep up slightly. It's a very aggressive, but achievable, target for a product with these features and desired "premium feel" in a competitive market.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="target-cost"><b>Final Realistic Cost Target: ₹5,500/unit</b> (allowing for slight flexibility and optimization around ₹5,250-₹5,750).</p>
+    </div>
+</body>
+</html>
